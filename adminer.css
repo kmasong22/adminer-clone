@@ -1,40 +1,46 @@
 :root {
-  background: #ececec;
+  --bg: #dedede;
+  --altbg: #dcdcdc;
+  background: var(--bg);
   font-size: 12pt;
 }
-#logout{
-  background: none; color: #333;
-}
-#logout:hover{
-  background: none; color: crimson; font-weight: bold;
-}
+#logout{ background: none; color: #333; }
+#logout:hover{ background: none; color: crimson; font-weight: bold; }
 button, input[type="button"], input[type="submit"]{
-  background: #2196F3;
+  background: #1976d2;
   border: none;
   display: inline-block;
   cursor: pointer;
   color: #fff;
 }
-input, select{
-  padding: 4px 10px !important;
-}
+input{ padding: 4px 10px !important; }
+select{ padding: 4px !important; }
+input[type="image"]{ background: slategray; border: 1px solid #ececec; color: #333; }
 button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled{
   background: #9e9e9e;
   cursor: not-allowed;
   color: #ececec;
 }
-.links a {
-  font-size: 80%;
+.links a { font-size: 80%; padding: 2px 5px; }
+#tables a, #logins a{ font-size: 88%; background: var(--bg); }
+#tables a.active{ color: #313131; }
+#tables, #logins{ background: var(--bg); }
+.scrollable{
+	max-width: 98vw !important;
+	overflow: scroll;
+	max-height: 600px !important;
 }
-#tables a{
-  font-size: 88%; background: #ececec;
-}
-#tables a.active{
-  color: #313131;
-}
-#tables{
-  background: #ececec;
-}
+#content { max-width: 100vw !important; padding: 0; }
+.jush-sql, .time { display: inline-block; padding: 5px; }
+.time { color: #111; }
+#breadcrumb { font-size: 85%; }
+.footer div { background: var(--bg); border-top: 1px solid var(--bg) !important; }
+.odd { background: var(--altbg) !important; }
+.sqlarea .jush { max-width: 98vw !important; font-size: 1.25rem; overflow-wrap: break-word; display: inline-block; }
+
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: #829fbd; }
+::-webkit-scrollbar-thumb { background: #1976d2; }
 
 #menu {
 	margin: 0;
